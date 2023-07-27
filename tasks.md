@@ -90,7 +90,7 @@ SELECT * FROM matches JOIN divisions ON matches.division_code = divisions.code W
 The division where the most goals 1592 were scored was in the National League and in 2013 
 ```sql
 <!-- Copy solution here -->
-SELECT divisions.name, season, SUM(fthg+ftag) FROM matches JOIN divisions ON divisions.code = matches.division_code GROUP BY season, divisions.name ORDER BY SUM(fthg + ftag) DESC;
+SELECT divisions.name, season, SUM(fthg+ftag) AS total_goals FROM matches JOIN divisions ON divisions.code = matches.division_code GROUP BY season, divisions.name ORDER BY total_goals DESC;
 
 ```
 
