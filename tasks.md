@@ -82,7 +82,7 @@ SELECT COUNT(ftr) FROM matches JOIN divisions ON matches.division_code = divisio
 9) Select the matches played in the Premier League in order of total goals scored from highest to lowest. When two matches have the same total the match with more home goals should come first.
 
 ```sql
-SELECT * FROM matches JOIN divisions ON matches.division_code = divisions.code WHERE (divisions.name = 'Premier League') ORDER BY (matches.fthg + matches.ftag) DESC, matches.fthg;
+SELECT * FROM matches JOIN divisions ON matches.division_code = divisions.code WHERE (divisions.name = 'Premier League') ORDER BY (matches.fthg + matches.ftag) DESC, matches.fthg DESC; -- Need the DESC after matches.fthg so matches with more home goals are displayed first
 
 ```
 
