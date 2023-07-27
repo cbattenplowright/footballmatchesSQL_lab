@@ -87,6 +87,7 @@ SELECT * FROM matches JOIN divisions ON matches.division_code = divisions.code W
 ```
 
 10) In which division and which season were the most goals scored?
+
 The division where the most goals 1592 were scored was in the National League and in 2013 
 ```sql
 <!-- Copy solution here -->
